@@ -393,62 +393,48 @@
             color: var(--accent);
         }
         
-        .contact-form {
+        .contact-buttons {
             flex: 1;
             min-width: 300px;
             background-color: white;
             padding: 30px;
             border-radius: 10px;
             box-shadow: var(--shadow);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
         }
         
-        .contact-form h3 {
+        .contact-buttons h3 {
             color: var(--dark);
             margin-bottom: 20px;
             text-align: center;
         }
         
-        .form-group {
-            margin-bottom: 20px;
-        }
-        
-        .form-group label {
-            display: block;
-            margin-bottom: 5px;
-            color: var(--dark);
-            font-weight: 500;
-        }
-        
-        .form-group input,
-        .form-group textarea {
-            width: 100%;
-            padding: 12px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            font-size: 1rem;
-            font-family: 'Roboto', sans-serif;
-        }
-        
-        .form-group textarea {
-            min-height: 120px;
-            resize: vertical;
-        }
-        
-        .submit-btn {
-            background-color: var(--primary);
+        .whatsapp-btn {
+            display: inline-block;
+            background-color: #25D366;
             color: white;
-            border: none;
             padding: 15px 30px;
             border-radius: 5px;
-            font-size: 1.1rem;
+            text-decoration: none;
             font-weight: 600;
-            cursor: pointer;
-            width: 100%;
+            font-size: 1.1rem;
+            margin: 10px 0;
             transition: var(--transition);
+            width: 100%;
+            text-align: center;
         }
         
-        .submit-btn:hover {
-            background-color: var(--secondary);
+        .whatsapp-btn:hover {
+            background-color: #128C7E;
+            transform: translateY(-3px);
+        }
+        
+        .whatsapp-btn i {
+            margin-right: 10px;
         }
         
         /* Footer */
@@ -569,6 +555,15 @@
                 margin: 10px auto;
                 width: 80%;
             }
+            
+            .contact-buttons {
+                padding: 20px;
+            }
+            
+            .whatsapp-btn {
+                padding: 12px 20px;
+                font-size: 1rem;
+            }
         }
         
         /* Accessibility */
@@ -622,7 +617,7 @@
         }
         
         .high-contrast .service-card,
-        .high-contrast .contact-form,
+        .high-contrast .contact-buttons,
         .high-contrast .gallery-item,
         .high-contrast .about-image {
             border: 2px solid yellow;
@@ -672,7 +667,7 @@
                 </ul>
             </nav>
             
-            <a href="#contact" class="contact-btn">Solicitar Orçamento</a>
+            <a href="https://wa.me/5521999999999?text=Olá,%20gostaria%20de%20solicitar%20um%20orçamento%20para%20locação%20de%20caçamba." class="contact-btn" target="_blank">Solicitar Orçamento</a>
             
             <div class="mobile-menu-btn" id="mobile-menu-btn">
                 <i class="fas fa-bars"></i>
@@ -686,7 +681,7 @@
             <h1>Sua solução para remoção de resíduos</h1>
             <p>Rápido, seguro e sustentável! Oferecemos o melhor serviço de aluguel de caçambas para sua obra, reforma ou limpeza.</p>
             <div class="hero-buttons">
-                <a href="#contact" class="btn">Solicitar Caçamba</a>
+                <a href="https://wa.me/5521999999999?text=Olá,%20gostaria%20de%20solicitar%20um%20orçamento%20para%20locação%20de%20caçamba." class="btn" target="_blank">Solicitar Caçamba</a>
                 <a href="#services" class="btn btn-secondary">Conhecer Serviços</a>
             </div>
         </div>
@@ -858,32 +853,15 @@
                     </div>
                 </div>
                 
-                <div class="contact-form">
+                <div class="contact-buttons">
                     <h3>Solicite um Orçamento</h3>
-                    
-                    <form id="budget-form">
-                        <div class="form-group">
-                            <label for="name">Nome Completo</label>
-                            <input type="text" id="name" required>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="phone">Telefone</label>
-                            <input type="tel" id="phone" required>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="email">E-mail</label>
-                            <input type="email" id="email" required>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="message">Mensagem</label>
-                            <textarea id="message" placeholder="Descreva seu projeto e o tipo de resíduo..." required></textarea>
-                        </div>
-                        
-                        <button type="submit" class="submit-btn">Solicitar Orçamento</button>
-                    </form>
+                    <p>Entre em contato diretamente pelo WhatsApp</p>
+                    <a href="https://wa.me/5521999999999?text=Olá,%20gostaria%20de%20solicitar%20um%20orçamento%20para%20locação%20de%20caçamba." class="whatsapp-btn" target="_blank">
+                        <i class="fab fa-whatsapp"></i> Solicitar pelo WhatsApp
+                    </a>
+                    <a href="https://wa.me/5521999999999?text=Olá,%20gostaria%20de%20tirar%20dúvidas%20sobre%20os%20serviços." class="whatsapp-btn" target="_blank" style="background-color: var(--primary);">
+                        <i class="fas fa-question-circle"></i> Tirar Dúvidas
+                    </a>
                 </div>
             </div>
         </div>
@@ -900,7 +878,7 @@
                     <div class="social-links">
                         <a href="#"><i class="fab fa-facebook-f"></i></a>
                         <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                        <a href="https://wa.me/5521999999999" target="_blank"><i class="fab fa-whatsapp"></i></a>
                     </div>
                 </div>
                 
@@ -982,15 +960,6 @@
             });
         });
         
-        // Form submission
-        document.getElementById('budget-form').addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            // Here you would normally send the form data to a server
-            alert('Obrigado! Sua solicitação foi enviada. Entraremos em contato em breve.');
-            this.reset();
-        });
-        
         // Accessibility Features
         document.getElementById('font-increase').addEventListener('click', function() {
             document.body.classList.toggle('larger-text');
@@ -1008,5 +977,4 @@
         });
     </script>
 </body>
-
 </html>
